@@ -1,0 +1,22 @@
+{
+    "idSave": 2018,
+    "isFirstSession": false,
+    "language": "ru",
+    "promptDone": false,
+    "money": 1,
+    "score": 0,
+    "soundVolume": 0.15013976395130158,
+    "lvlsProgress": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "newPlayerName": "Hello!",
+    "openLevels": [
+        false,
+        true,
+        false
+    ]
+}
