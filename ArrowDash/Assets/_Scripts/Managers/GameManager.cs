@@ -71,8 +71,20 @@ public class GameManager : MonoBehaviour
         _arrow.OnFinish += FinishGame;
         _arrow.OnFixedUpdate += MoveObjects;
         _arrow.OnFinishClose += FinishClose;
+        _arrow.OnStartLags += _background.ChangeOnLagsAnim;
 
         _virtualCamera.Follow = _arrow.transform;
+    }
+    private void OnDisable()
+    {
+        _gameUIController.OnPauseSwitch -= GamePauseSwitch;
+        _gameUIController.OnCloseGameScene -= BackToMenu;
+
+        _arrow.OnDeath -= RestartGame;
+        _arrow.OnFinish -= FinishGame;
+        _arrow.OnFixedUpdate -= MoveObjects;
+        _arrow.OnFinishClose -= FinishClose;
+        _arrow.OnStartLags -= _background.ChangeOnLagsAnim;
     }
     private void MoveObjects()
     {
@@ -85,6 +97,7 @@ public class GameManager : MonoBehaviour
         PlayParticle();
         _background.ChangeSpeed(0);
         _audioManager.PlayLose();
+        SaveProgress();
 
         _cancellationTokenSource = new CancellationTokenSource();
         DeathDelay(_cancellationTokenSource.Token).Forget();
@@ -126,14 +139,17 @@ public class GameManager : MonoBehaviour
 
     private void BackToMenu()
     {
-        CheckGameProgress();
-
-        //YandexGame.savesData.lvlsProgress[_currentLvl.LvlNum] = Mathf.RoundToInt(_currentLvlProgress);
-        //YandexGame.SaveProgress();
+        SaveProgress();
 
         _cancellationTokenSource?.Cancel();
         Time.timeScale = 1;
         _eventBase?.Invoke(new EndGameEvent());
+    }
+    private void SaveProgress()
+    {
+        CheckGameProgress();
+        YandexGame.savesData.lvlsProgress[_currentLvl.LvlNum] = Mathf.RoundToInt(_currentLvlProgress);
+        YandexGame.SaveProgress();
     }
     private void FinishClose()
     {
@@ -142,7 +158,7 @@ public class GameManager : MonoBehaviour
     }
     private void CheckGameProgress()
     {
-        float progress = (_arrow.transform.position.x / _currentLvl.Duration) * 100;
+        float progress = _arrow.transform.position.x / _currentLvl.Duration * 100;
         _currentLvlProgress = progress > _currentLvlProgress ? progress : _currentLvlProgress;
     }
     private void GamePauseSwitch()

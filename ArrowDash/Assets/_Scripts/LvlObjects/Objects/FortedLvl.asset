@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b5785d33429aa43b7c6a16d5d87256, type: 3}
   m_Name: FortedLvl
   m_EditorClassIdentifier: 
-  _duration: 633
+  _duration: 818
   _lvlNum: 3
   _lvlAudioClip: FourLvlClip
   _lvlBackground: FortedBack

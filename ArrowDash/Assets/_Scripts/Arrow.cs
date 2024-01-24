@@ -6,6 +6,7 @@ public class Arrow : MonoBehaviour
     public Action OnDeath;
     public Action OnFinish;
     public Action OnFinishClose;
+    public Action OnStartLags;
     public Action OnFixedUpdate;
 
     [SerializeField] private float _moveSpeed = 1;
@@ -55,7 +56,14 @@ public class Arrow : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        OnFinishClose?.Invoke();
+        if (collision.gameObject.CompareTag("Lags"))
+        {
+            OnStartLags?.Invoke();
+        }
+        else
+        {
+            OnFinishClose?.Invoke();
+        }
     }
     public void ClearTrail()
     {

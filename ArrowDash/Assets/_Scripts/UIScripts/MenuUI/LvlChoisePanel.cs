@@ -39,6 +39,14 @@ public class LvlChoisePanel : MonoBehaviour
     {
         _lvlButtonImage = _playButton.GetComponent<Image>();
     }
+    private void OnEnable()
+    {
+        YandexGame.GetDataEvent += SetProgress;
+    }
+    private void OnDisable()
+    {
+        YandexGame.GetDataEvent -= SetProgress;
+    }
     private void Start()
     {
         FaceIndex = 0;
@@ -46,18 +54,21 @@ public class LvlChoisePanel : MonoBehaviour
     }
 
     public RectTransform LvlBlock { get { return _lvlBlock; } }
-    public TextMeshProUGUI ProgressText { get { return _progressText; } }
     public Button BackButton { get { return _backButton; } }
     public Button LeftSwipeButton { get { return _leftSwipeButton; } }
     public Button RightSwipeButton { get { return _rightSwipeButton; } }
     public Button PlayButton { get { return _playButton; } }
 
+    private void SetProgress()
+    {
+        int progress = YandexGame.savesData.lvlsProgress[FaceIndex];
+        progress = progress <= 100 ? progress : 100;
+        _progressText.text = progress.ToString() + "%";
+    }
     public void ChangeLvlFace(int direction)
     {
         FaceIndex += direction;
         _lvlButtonImage.sprite = _lvlFaces[FaceIndex];
-        int progress = YandexGame.savesData.lvlsProgress[FaceIndex];
-        progress = progress <= 100 ? progress : 100;
-        _progressText.text = progress.ToString() + "%";
+        SetProgress();
     }
 }

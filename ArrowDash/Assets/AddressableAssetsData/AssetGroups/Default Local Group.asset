@@ -62,13 +62,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 48de157abb3c3db4d86bca179a022398
+  - m_GUID: 72e397214cc75a04d835a63bcf99d328
     m_Address: ThirtLvlPrefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e093566c92cd81d46911343f33203e99
-    m_Address: FortedLvlPrefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -104,6 +99,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b31050d84e6e9eb4aafc549c809d2ae9
     m_Address: FirstLvlPrefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1e209c4a1a119d54ab95d9af5d6ed3cd
+    m_Address: FortedLvlPrefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
