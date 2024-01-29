@@ -26,7 +26,7 @@ public class AssetSceneLoader
     private async void LoadGameScene(StartGameEvent gameEvent)
     {
         _eventBase?.Unsubscribe<InitMenuUIEvent>();
-        _audioManager.MuteAudio();
+        _audioManager.StopAudio();
 
         var loadingOperations = new Queue<ILoadingOperation>();
         loadingOperations.Enqueue(new LoadGameSceneOperation(_assetProvider));
@@ -36,13 +36,13 @@ public class AssetSceneLoader
     private async void LoadMenuScene(EndGameEvent gameEvent)
     {
         _eventBase?.Unsubscribe<ChangeSpriteEvent>();
-        _audioManager.MuteAudio();
-        YandexGame.FullscreenShow();
+        _audioManager.StopAudio();
 
         var loadingOperations = new Queue<ILoadingOperation>();
         loadingOperations.Enqueue(new LoadMenuSceneOperation());
         loadingOperations.Enqueue(new InitialiseMenuUIOperation(_eventBase));
         loadingOperations.Enqueue(new InitialiseAudioOperation(_audioManager));
         await new LoadingScreenProvider().LoadAndDestroy(loadingOperations);
+        YandexGame.FullscreenShow();
     }
 }

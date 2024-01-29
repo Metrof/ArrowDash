@@ -67,11 +67,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9481e5ec727fde24ea52e5f175031087
-    m_Address: FivtedLvlPrefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 81403ba519dcc1343a749f69b8989883
     m_Address: FirstBack
     m_ReadOnly: 0
@@ -104,6 +99,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1e209c4a1a119d54ab95d9af5d6ed3cd
     m_Address: FortedLvlPrefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 02d4c11333bbf264494f591d20ecd907
+    m_Address: FivtedLvlPrefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

@@ -10,6 +10,8 @@ public class AudioManager : MonoBehaviour
     private EventBase _eventBase;
     private AudioClip _currentClip;
 
+    private float _currentTime;
+
     [Inject]
     private void Construct(EventBase eventBase)
     {
@@ -28,9 +30,10 @@ public class AudioManager : MonoBehaviour
         IsLoop(isLoop);
         await UniTask.Yield();
     }
-    public void MuteAudio()
+    public void StopAudio()
     {
-        _source.mute = true;
+        _source.Stop();
+        _source.clip = null;
     }
     public void PlayClip(AudioClip clip)
     {
@@ -45,7 +48,8 @@ public class AudioManager : MonoBehaviour
     public void PlayLose()
     {
         _source.Stop();
-        _source.PlayOneShot(_loseClip);
+        _source.clip = _loseClip;
+        _source.Play();
     }
     public void RestartPlay()
     {
@@ -53,13 +57,15 @@ public class AudioManager : MonoBehaviour
     }
     public void SwitchAudioPause()
     {
-        if (_source.isPlaying)
+        if (Time.timeScale != 0)
         {
+            _currentTime = _source.time;
             _source.Pause();
         }
         else
         {
-            _source.UnPause();
+            _source.time = _currentTime;
+            _source.Play();
         }
     }
 }

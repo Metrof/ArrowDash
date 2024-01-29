@@ -14,16 +14,19 @@ public class LoadScreen : MonoBehaviour
     private bool _animIsPlayind;
 
     private Color _fadeColor;
+    private Color _normalColor;
 
     private void Start()
     {
         DontDestroyOnLoad(this);
-        _fadeColor = _loadPanel.color;
+        _normalColor = _loadPanel.color;
+        _fadeColor = _normalColor;
         _fadeColor.a = 0;
     }
     public async UniTask Load(Queue<ILoadingOperation> loadingOperations)
     {
         _canvas.enabled = true;
+        _loadPanel.color = _normalColor;
 
         foreach (var operation in loadingOperations)
         {

@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
     private void FinishGame()
     {
         PlayParticle();
-        _audioManager.MuteAudio();
+        _audioManager.StopAudio();
 
         _cancellationTokenSource = new CancellationTokenSource();
         WinDelay(_cancellationTokenSource.Token).Forget();

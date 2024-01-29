@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b5785d33429aa43b7c6a16d5d87256, type: 3}
   m_Name: FivtedLvl
   m_EditorClassIdentifier: 
-  _duration: 641
+  _duration: 644
   _lvlNum: 4
   _lvlAudioClip: FiveLvlClip
   _lvlBackground: FivtedBack

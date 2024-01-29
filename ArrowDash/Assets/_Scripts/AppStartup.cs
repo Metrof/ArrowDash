@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using YG;
 using Zenject;
 
 public class AppStartup : MonoBehaviour
@@ -30,6 +30,7 @@ public class AppStartup : MonoBehaviour
         loadingOperations.Enqueue(new InitialiseMenuUIOperation(_eventBase));
         loadingOperations.Enqueue(new InitialiseAudioOperation(_audioManager));
         await new LoadingScreenProvider().LoadAndDestroy(loadingOperations);
+        YandexGame.GameReadyAPI();
         Destroy(gameObject);
     }
 }

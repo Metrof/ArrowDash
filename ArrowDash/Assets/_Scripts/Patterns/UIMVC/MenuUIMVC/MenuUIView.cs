@@ -59,6 +59,7 @@ public class MenuUIView
     
     public void Initialize()
     {
+        GameObject.Destroy(_menuCanvas.BlackPanel);
         _menuCanvas.SettingPanel.gameObject.SetActive(false);
         _menuCanvas.LvlChoisePanel.gameObject.SetActive(false);
         _menuCanvas.SettingPanel.SoundSlider.value = YandexGame.savesData.soundVolume;

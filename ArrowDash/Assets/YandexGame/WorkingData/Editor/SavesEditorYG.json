@@ -1,18 +1,18 @@
 {
-    "idSave": 2406,
+    "idSave": 41,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
     "money": 1,
     "score": 0,
-    "soundVolume": 0.09342367202043534,
     "lvlsProgress": [
-        100,
-        15,
-        14,
-        24,
-        10
+        3,
+        0,
+        0,
+        0,
+        0
     ],
+    "soundVolume": 0.0,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,

@@ -1534,44 +1534,44 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 3457036565762521886}
     m_ColliderPaths:
-    - - X: 84852808
-        Y: 49999996
-      - X: 4
-        Y: 134852816
-      - X: -84852808
-        Y: 50000004
-      - X: -4
-        Y: -34852808
+    - - X: 79195960
+        Y: 50000000
+      - X: 2
+        Y: 129195960
+      - X: -79195960
+        Y: 50000000
+      - X: -2
+        Y: -29195958
   - m_Collider: {fileID: 6639230971947603199}
     m_ColliderPaths:
-    - - X: 124852808
-        Y: 49999996
-      - X: 40000004
-        Y: 134852816
-      - X: -44852808
-        Y: 50000004
+    - - X: 119195960
+        Y: 50000000
+      - X: 40000000
+        Y: 129195960
+      - X: -39195956
+        Y: 50000000
       - X: 39999996
-        Y: -34852808
+        Y: -29195958
   - m_Collider: {fileID: 3477376672068519279}
     m_ColliderPaths:
-    - - X: 164852816
-        Y: 49999996
+    - - X: 159195952
+        Y: 50000000
       - X: 80000000
-        Y: 134852816
-      - X: -4852810
-        Y: 50000004
-      - X: 79999992
-        Y: -34852808
+        Y: 129195960
+      - X: 804042
+        Y: 50000000
+      - X: 80000000
+        Y: -29195958
   - m_Collider: {fileID: 6455917385835982136}
     m_ColliderPaths:
-    - - X: 204852816
-        Y: 49999996
+    - - X: 199195952
+        Y: 50000000
       - X: 120000000
-        Y: 134852816
-      - X: 35147192
-        Y: 50000004
+        Y: 129195960
+      - X: 40804044
+        Y: 50000000
       - X: 120000000
-        Y: -34852808
+        Y: -29195958
   - m_Collider: {fileID: 3457036565762521886}
     m_ColliderPaths: []
   - m_Collider: {fileID: 6639230971947603199}
@@ -1582,22 +1582,22 @@ CompositeCollider2D:
     m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
-    - - {x: -0.0000211, y: -3.48526}
-      - {x: 2.0000205, y: -1.4853016}
-      - {x: 4.0000205, y: -3.48526}
-      - {x: 6.00002, y: -1.4853019}
-      - {x: 8.00002, y: -3.48526}
-      - {x: 10.000021, y: -1.4853014}
-      - {x: 12.000021, y: -3.48526}
-      - {x: 20.485262, y: 5.0000205}
-      - {x: 11.999979, y: 13.485261}
-      - {x: 9.999979, y: 11.485303}
-      - {x: 7.9999795, y: 13.485261}
-      - {x: 5.9999795, y: 11.485303}
-      - {x: 3.9999797, y: 13.485261}
-      - {x: 1.9999796, y: 11.485303}
-      - {x: -0.0000203, y: 13.485261}
-      - {x: -8.48526, y: 4.9999795}
+    - - {x: -0.0000209, y: -2.9195752}
+      - {x: 2.0000205, y: -0.9196167}
+      - {x: 4.0000205, y: -2.9195752}
+      - {x: 6.0000205, y: -0.9196165}
+      - {x: 8.000021, y: -2.9195752}
+      - {x: 10.000021, y: -0.9196165}
+      - {x: 12.000021, y: -2.9195752}
+      - {x: 19.919575, y: 5.000021}
+      - {x: 11.999979, y: 12.919576}
+      - {x: 9.999979, y: 10.919617}
+      - {x: 7.9999795, y: 12.919576}
+      - {x: 5.9999795, y: 10.919617}
+      - {x: 3.9999793, y: 12.919576}
+      - {x: 1.9999796, y: 10.919617}
+      - {x: -0.0000205, y: 12.919576}
+      - {x: -7.919575, y: 4.9999795}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -2149,7 +2149,7 @@ Transform:
   m_GameObject: {fileID: 978459525052200273}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: 0.15, y: -1.9, z: 0}
+  m_LocalPosition: {x: 0.15, y: -2.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13427,7 +13427,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 8, y: 5, z: 0}
-  m_LocalScale: {x: 12, y: 12, z: 1}
+  m_LocalScale: {x: 11.2, y: 11.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1707997406767983833}
@@ -24225,7 +24225,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 5, z: 0}
-  m_LocalScale: {x: 12, y: 12, z: 1}
+  m_LocalScale: {x: 11.2, y: 11.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1707997406767983833}
@@ -25038,7 +25038,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 4, y: 5, z: 0}
-  m_LocalScale: {x: 12, y: 12, z: 1}
+  m_LocalScale: {x: 11.2, y: 11.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1707997406767983833}
@@ -29475,7 +29475,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 12, y: 5, z: 0}
-  m_LocalScale: {x: 12, y: 12, z: 1}
+  m_LocalScale: {x: 11.2, y: 11.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1707997406767983833}

@@ -1,6 +1,5 @@
 using YG;
 using Zenject;
-using UnityEngine;
 
 public class MenuUIController
 {

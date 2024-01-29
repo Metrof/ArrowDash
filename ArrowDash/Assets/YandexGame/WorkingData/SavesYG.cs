@@ -15,9 +15,10 @@ namespace YG
         public int money = 1;
 
         public int score;
-        public float soundVolume = 1;
         public int[] lvlsProgress = new int[5];
+        public float soundVolume;
 
+        // Можно задать полям значения по умолчанию
         public string newPlayerName = "Hello!";
         public bool[] openLevels = new bool[3];
 
